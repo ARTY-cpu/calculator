@@ -1,0 +1,35 @@
+﻿<Window x:Class="Position_Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Position_Calculator"
+        mc:Ignorable="d"
+        Title="position size calculator" Height="500" Width="500"
+        ResizeMode="CanMinimize">
+    
+    <Grid>
+        <Label Content = "Position Size" HorizontalAlignment="Left" Margin="200,20,0,0" VerticalAlignment="Top" FontFamily="Source Sans Pro Black" FontSize="20"/>
+        <RadioButton x:Name="RadioButton1" Content="Long Position"  HorizontalAlignment="Left" Margin="50,80,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="RadioButton2" Content="Short position" HorizontalAlignment="Left" Margin="350,80,0,0" VerticalAlignment="Top"/>
+        
+        <TextBlock Text="Starting Cap :" HorizontalAlignment="Left" Margin="100,100,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="SemiBold"/>
+        <TextBox x:Name="Startingcap" HorizontalAlignment="Left" Margin="200,103,0,0" VerticalAlignment="Top" Width="100"/>
+        <TextBlock Text="Price BTC :" HorizontalAlignment="Left" Margin="100,130,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="SemiBold"/>
+        <TextBox x:Name="BTCprix" HorizontalAlignment="Left" Margin="180,133,0,0" VerticalAlignment="Top" Width="150"/>
+        <TextBlock Text="Risk :" HorizontalAlignment="Left" Margin="100,160,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="SemiBold"/>
+        <TextBox x:Name="risk" HorizontalAlignment="Left" Margin="140,163,0,0" VerticalAlignment="Top" Width="50"/>
+        
+        <TextBlock Text="Entry :" HorizontalAlignment="Left" Margin="50,300,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="SemiBold"/>
+        <TextBlock Text="Take Profit :" HorizontalAlignment="Left" Margin="190,300,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="SemiBold"/>
+        <TextBlock Text="Stop Loss :" HorizontalAlignment="Left" Margin="350,300,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="SemiBold"/>
+        
+        <TextBox x:Name="Entry" HorizontalAlignment="Left" Margin="50,330,0,0" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="TakeProfit" HorizontalAlignment="Left" Margin="190,330,0,0" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="StopLoss" HorizontalAlignment="Left" Margin="350,330,0,0" VerticalAlignment="Top" Width="100"/>
+        
+        
+        
+        <Button Content="Calcul" HorizontalAlignment="Left" Margin="224,430,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+    </Grid>
+</Window>

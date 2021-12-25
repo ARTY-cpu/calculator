@@ -1,0 +1,22 @@
+D:\OwnProject\Position Calculator\Position Calculator\bin\Debug\net5.0-windows\Position Calculator.exe
+D:\OwnProject\Position Calculator\Position Calculator\bin\Debug\net5.0-windows\Position Calculator.deps.json
+D:\OwnProject\Position Calculator\Position Calculator\bin\Debug\net5.0-windows\Position Calculator.runtimeconfig.json
+D:\OwnProject\Position Calculator\Position Calculator\bin\Debug\net5.0-windows\Position Calculator.runtimeconfig.dev.json
+D:\OwnProject\Position Calculator\Position Calculator\bin\Debug\net5.0-windows\Position Calculator.dll
+D:\OwnProject\Position Calculator\Position Calculator\bin\Debug\net5.0-windows\ref\Position Calculator.dll
+D:\OwnProject\Position Calculator\Position Calculator\bin\Debug\net5.0-windows\Position Calculator.pdb
+D:\OwnProject\Position Calculator\Position Calculator\obj\Debug\net5.0-windows\Position Calculator.csproj.AssemblyReference.cache
+D:\OwnProject\Position Calculator\Position Calculator\obj\Debug\net5.0-windows\MainWindow.g.cs
+D:\OwnProject\Position Calculator\Position Calculator\obj\Debug\net5.0-windows\App.g.cs
+D:\OwnProject\Position Calculator\Position Calculator\obj\Debug\net5.0-windows\Position Calculator_MarkupCompile.cache
+D:\OwnProject\Position Calculator\Position Calculator\obj\Debug\net5.0-windows\Position Calculator_MarkupCompile.lref
+D:\OwnProject\Position Calculator\Position Calculator\obj\Debug\net5.0-windows\MainWindow.baml
+D:\OwnProject\Position Calculator\Position Calculator\obj\Debug\net5.0-windows\Position Calculator.g.resources
+D:\OwnProject\Position Calculator\Position Calculator\obj\Debug\net5.0-windows\Position Calculator.GeneratedMSBuildEditorConfig.editorconfig
+D:\OwnProject\Position Calculator\Position Calculator\obj\Debug\net5.0-windows\Position Calculator.AssemblyInfoInputs.cache
+D:\OwnProject\Position Calculator\Position Calculator\obj\Debug\net5.0-windows\Position Calculator.AssemblyInfo.cs
+D:\OwnProject\Position Calculator\Position Calculator\obj\Debug\net5.0-windows\Position Calculator.csproj.CoreCompileInputs.cache
+D:\OwnProject\Position Calculator\Position Calculator\obj\Debug\net5.0-windows\Position Calculator.dll
+D:\OwnProject\Position Calculator\Position Calculator\obj\Debug\net5.0-windows\ref\Position Calculator.dll
+D:\OwnProject\Position Calculator\Position Calculator\obj\Debug\net5.0-windows\Position Calculator.pdb
+D:\OwnProject\Position Calculator\Position Calculator\obj\Debug\net5.0-windows\Position Calculator.genruntimeconfig.cache
