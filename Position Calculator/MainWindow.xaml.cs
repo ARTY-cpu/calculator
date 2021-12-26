@@ -53,7 +53,11 @@ namespace Position_Calculator
 
             var risque = float.Parse(risk.Text);
 
+
             var entry = float.Parse(Entry.Text);
+            
+            
+            
             var TP = float.Parse(TakeProfit.Text);
             var SL = float.Parse(StopLoss.Text);
 
