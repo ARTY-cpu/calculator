@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Binance.Net;
 
 namespace Position_Calculator
 {
@@ -20,63 +21,57 @@ namespace Position_Calculator
     /// </summary>
     public partial class MainWindow : Window
     {
-        
         public MainWindow()
         {
             InitializeComponent();
         }
+        
+        
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (RadioButton1.IsChecked == true)
+            string json;
+
+            using (var web = new System.Net.WebClient())
             {
-                var capital = float.Parse(Startingcap.Text);
-                var price = float.Parse(BTCprix.Text);
-                var risque = float.Parse(risk.Text);
-
-                var entry = float.Parse(Entry.Text);
-                var TP = float.Parse(TakeProfit.Text);
-                var SL = float.Parse(StopLoss.Text);
-
-                var gain = (TP / entry - 1) * 100;
-                var loss = (1 - SL / entry) * 100;
-                var RR = gain / loss;
-
-                var amount = (capital * risque) / loss;
-
-                MessageBox.Show("gain :" + Math.Abs(gain) + " %" +
-                                Environment.NewLine +
-                                "loss :" + Math.Abs(loss) + " %" +
-                                Environment.NewLine +
-                                "RR :" + RR +
-                                Environment.NewLine +
-                                "Amount to trade : $" +Math.Abs(amount));
-
+                var url = @"https://api.coindesk.com/v1/bpi/currentprice.json";
+                json = web.DownloadString(url);
             }
-            else if (RadioButton2.IsChecked == true)
+
+            dynamic obj = Newtonsoft.Json.JsonConvert.DeserializeObject(json);
+            var currentPrice = Convert.ToDecimal(obj.bpi.USD.rate.Value);
+
+
+            dynamic price = 0;
+            var capital = float.Parse(Startingcap.Text);
+
+            if (BTCprix.Text == "")
+                price = currentPrice;
+            else if (BTCprix.Text != "")
             {
-                var capital = float.Parse(Startingcap.Text);
-                var price = float.Parse(BTCprix.Text);
-                var risque = float.Parse(risk.Text);
-
-                var entry = float.Parse(Entry.Text);
-                var TP = float.Parse(TakeProfit.Text);
-                var SL = float.Parse(StopLoss.Text);
-
-                var gain = (TP / entry - 1) * 100;
-                var loss = (1 - SL / entry) * 100;
-                var RR = gain / loss;
-
-                var amount = (capital * risque) / loss;
-
-                MessageBox.Show("gain :" + Math.Abs(gain) + " %" +
-                                Environment.NewLine +
-                                "loss :" + Math.Abs(loss) + " %" +
-                                Environment.NewLine +
-                                "RR :" + RR +
-                                Environment.NewLine +
-                                "Amount to trade : $" +Math.Abs(amount));
-
+                price = BTCprix.Text;
             }
+
+            var risque = float.Parse(risk.Text);
+
+            var entry = float.Parse(Entry.Text);
+            var TP = float.Parse(TakeProfit.Text);
+            var SL = float.Parse(StopLoss.Text);
+
+            var gain = (TP / entry - 1) * 100; 
+            var loss = (1 - SL / entry) * 100;
+            var RR = gain / loss;
+
+            var amount = (capital * risque) / loss;
+
+            MessageBox.Show("Price BTC :" + price + Environment.NewLine +
+                "gain :" + Math.Abs(gain) + " %" +
+                            Environment.NewLine +
+                            "loss :" + Math.Abs(loss) + " %" +
+                            Environment.NewLine +
+                            "RR :" + RR +
+                            Environment.NewLine +
+                            "Amount to trade : $" +Math.Abs(amount));
+                
         }
     }
 }

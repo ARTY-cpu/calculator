@@ -37,6 +37,12 @@
       "frameworks": {
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
+          "dependencies": {
+            "Binance.Net": {
+              "target": "Package",
+              "version": "[8.0.0-alpha2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

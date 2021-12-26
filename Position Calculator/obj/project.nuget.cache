@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "TZEH+IL66s0zAsGzqw/90s7hn13BAHoOhdyzjwcJw50E2w+ReSYlfCZPolm0IpJrEwWr3GWIlBnjdUqXpW6hYA==",
+  "dgSpecHash": "Bb5o2gERHfBcLAcYIyR6sfZ1G4jSdCZTW2pq7fWhgOYFwfYNryK0U/zaiy2n25vaD+NlWVZYPEmRkGn/GAx+NQ==",
   "success": true,
   "projectFilePath": "D:\\OwnProject\\Position Calculator\\Position Calculator\\Position Calculator.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Arthur\\.nuget\\packages\\binance.net\\8.0.0-alpha2\\binance.net.8.0.0-alpha2.nupkg.sha512",
+    "C:\\Users\\Arthur\\.nuget\\packages\\cryptoexchange.net\\5.0.0-alpha2\\cryptoexchange.net.5.0.0-alpha2.nupkg.sha512",
+    "C:\\Users\\Arthur\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.1.0\\microsoft.extensions.logging.abstractions.3.1.0.nupkg.sha512",
+    "C:\\Users\\Arthur\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
   "logs": []
 }
