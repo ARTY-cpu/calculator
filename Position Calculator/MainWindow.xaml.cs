@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -85,8 +86,9 @@ namespace Position_Calculator
 
 
             var entry = float.Parse(Entry.Text);
-            
-            
+
+            var datetemp = DateTime.Now;
+            var date_str = datetemp.ToString("g");
             
             var TP = float.Parse(TakeProfit.Text);
             var SL = float.Parse(StopLoss.Text);
@@ -97,8 +99,23 @@ namespace Position_Calculator
 
             var amount = (capital * risque) / loss;
 
+
+            var lineStr = date_str + " " + price + " " + entry +" "+ TP +" "+ SL + (TP > SL ? " LONG": " SHORT");
+
+            // async Task SaveCalcul(dynamic line_str)
+            // {
+            //     using StreamWriter file = new("History.txt", append:true);
+            //     await file.WriteLineAsync(line_str);
+            // }
+
+            StreamWriter myWriter = File.AppendText("History.txt");
+            myWriter.WriteLine(lineStr);
+            myWriter.Close();
+            
+            //SaveCalcul(lineStr);
+
             MessageBox.Show("Price BTC :" + price + Environment.NewLine +
-                "gain :" + Math.Abs(gain) + " %" +
+                            "gain :" + Math.Abs(gain) + " %" +
                             Environment.NewLine +
                             "loss :" + Math.Abs(loss) + " %" +
                             Environment.NewLine +
